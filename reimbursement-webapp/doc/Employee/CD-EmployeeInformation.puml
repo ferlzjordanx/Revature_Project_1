@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class EmployeeInformationForm {
+    - username: String
+    - password: String
+    - name: String
+    - jobTitle: String
+    - managerId: Integer
+    - managers: List<Manager>
+}
+
+class EmployeeInformationController {
+    + doGet(request: HttpServletRequest, response: HttpServletResponse): void
+    + doPost(request: HttpServletRequest, response: HttpServletResponse): void
+    - fillForm(form, employee): void
+    - fillEmployee(form, employee): void
+}
+
+class EmployeeService {
+    + findById(id: Integer): Employee
+    + save(employee: Employee): void
+}
+
+class EmployeeRepository {
+    + findById(id: Integer): Employee
+    + save(employee: Employee): void
+}
+
+class ManagerService {
+    + findAll(): List<Manager>
+}
+
+class ManagerRepository {
+    + findAll(): List<Manager>
+}
+
+EmployeeInformationController ..> EmployeeInformationForm
+EmployeeInformationController *--> EmployeeService
+EmployeeService *--> EmployeeRepository
+EmployeeInformationController *--> ManagerService
+ManagerService *--> ManagerRepository
+
+@enduml

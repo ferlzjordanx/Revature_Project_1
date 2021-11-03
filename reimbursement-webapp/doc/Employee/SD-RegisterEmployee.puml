@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Manager
+boundary RegisterEmployeeController
+control EmployeeService
+control UserService
+control ManagerService
+boundary EmployeeRepository
+boundary ManagerRepository
+
+Manager -> RegisterEmployeeController: doGet(request, response)
+RegisterEmployeeController -> ManagerService: findAll()
+ManagerService -> ManagerRepository: findAll()
+ManagerService <-- ManagerRepository
+RegisterEmployeeController <-- ManagerService
+RegisterEmployeeController -> RegisterEmployeeController: fillForm(form, employee)
+Manager <-- RegisterEmployeeController
+
+Manager -> RegisterEmployeeController: doPost(request, response)
+RegisterEmployeeController -> RegisterEmployeeController: fillEmployee(form, employee)
+RegisterEmployeeController -> EmployeeService: save(employee)
+EmployeeService -> EmployeeRepository: save(employee)
+EmployeeService <-- EmployeeRepository
+RegisterEmployeeController <-- EmployeeService
+RegisterEmployeeController --> UserService: sendEmail(user)
+RegisterEmployeeController <-- UserService
+Manager <-- RegisterEmployeeController
+
+@enduml

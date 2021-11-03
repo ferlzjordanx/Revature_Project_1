@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Employee
+boundary EmployeeInformationController
+control EmployeeService
+boundary EmployeeRepository
+
+Employee -> EmployeeInformationController: doGet(request, response)
+EmployeeInformationController -> EmployeeService: findById(id)
+EmployeeService -> EmployeeRepository: findById(id)
+EmployeeService <-- EmployeeRepository
+EmployeeInformationController <-- EmployeeService
+EmployeeInformationController -> EmployeeInformationController: fillForm(form, employee)
+Employee <-- EmployeeInformationController
+
+Employee -> EmployeeInformationController: doPost(request, response)
+EmployeeInformationController -> EmployeeService: findById(id)
+EmployeeService -> EmployeeRepository: findById(id)
+EmployeeService <-- EmployeeRepository
+EmployeeInformationController <-- EmployeeService
+EmployeeInformationController -> EmployeeInformationController: fillEmployee(form, employee)
+Employee <-- EmployeeInformationController
+
+@enduml

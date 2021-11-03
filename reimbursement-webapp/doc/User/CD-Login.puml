@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class LoginForm {
+    - username: String
+    - password: String
+}
+
+class LoginController {
+    + doGet(request: HttpServletRequest, response: HttpServletResponse): void
+    + doPost(request: HttpServletRequest, response: HttpServletResponse): void
+}
+
+class UserService {
+    + findByUsername(username: String): User
+}
+
+class UserRepository {
+    + findByUsername(username: String): User
+}
+
+LoginController ..> LoginForm
+LoginController *--> UserService
+UserService *--> UserRepository
+
+@enduml

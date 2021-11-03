@@ -1,0 +1,681 @@
+2021-10-09 18:36:40,363 INFO o.e.r.u.UserRepository [http-nio-8081-exec-2] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 18:37:29,434 INFO o.e.r.u.UserRepository [http-nio-8081-exec-14] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 18:37:29,640 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-1] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 18:37:39,580 INFO o.e.r.u.UserRepository [http-nio-8081-exec-17] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+order by u.name 
+
+2021-10-09 18:38:04,297 INFO o.e.r.u.UserRepository [http-nio-8081-exec-15] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+order by u.name 
+
+2021-10-09 18:38:35,973 INFO o.e.r.u.UserRepository [http-nio-8081-exec-17] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 18:38:36,003 INFO o.e.r.u.UserRepository [http-nio-8081-exec-17] update reimbursement.tb_user set password = ?, name = ?, email = ?, job_title = ? where id = ? 
+
+2021-10-09 18:38:37,972 INFO o.e.r.u.UserRepository [http-nio-8081-exec-20] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+order by u.name 
+
+2021-10-09 18:44:52,779 INFO o.e.r.u.UserRepository [http-nio-8081-exec-15] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 18:44:52,985 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-21] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 18:45:03,607 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-18] insert into reimbursement.tb_reimbursement (amount, status, employee_id, manager_id) 
+values (?, ?, ?, ?) 
+
+2021-10-09 18:45:03,812 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-17] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 18:45:15,281 INFO o.e.r.u.UserRepository [http-nio-8081-exec-23] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 18:45:15,446 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-11] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 18:45:24,568 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-13] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.id = ? 
+order by r.id desc 
+
+2021-10-09 18:45:24,595 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-13] update reimbursement.tb_reimbursement set amount = ?, status = ?, employee_id = ?, manager_id = ? where id = ? 
+
+2021-10-09 18:45:24,622 INFO o.e.r.u.UserRepository [http-nio-8081-exec-13] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 18:45:24,643 INFO o.e.r.u.UserRepository [http-nio-8081-exec-13] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 18:45:25,797 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-13] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:05:12,306 INFO o.e.r.u.UserRepository [http-nio-8081-exec-28] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:05:12,474 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-24] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:05:18,606 INFO o.e.r.u.UserRepository [http-nio-8081-exec-29] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+order by u.name 
+
+2021-10-09 19:07:06,997 INFO o.e.r.u.UserRepository [http-nio-8081-exec-22] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:07:07,154 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-27] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:07:13,013 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-24] insert into reimbursement.tb_reimbursement (amount, status, employee_id, manager_id) 
+values (?, ?, ?, ?) 
+
+2021-10-09 19:07:13,145 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-29] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:07:19,376 INFO o.e.r.u.UserRepository [http-nio-8081-exec-26] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:07:47,305 INFO o.e.r.u.UserRepository [http-nio-8081-exec-27] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:07:47,463 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-28] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:07:53,936 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-29] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.id = ? 
+order by r.id desc 
+
+2021-10-09 19:07:54,075 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-29] update reimbursement.tb_reimbursement set amount = ?, status = ?, employee_id = ?, manager_id = ? where id = ? 
+
+2021-10-09 19:07:54,108 INFO o.e.r.u.UserRepository [http-nio-8081-exec-29] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:07:54,130 INFO o.e.r.u.UserRepository [http-nio-8081-exec-29] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:07:55,315 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-29] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:08:19,632 INFO o.e.r.u.UserRepository [http-nio-8081-exec-22] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:08:19,790 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-27] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:08:25,060 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-21] insert into reimbursement.tb_reimbursement (amount, status, employee_id, manager_id) 
+values (?, ?, ?, ?) 
+
+2021-10-09 19:08:25,206 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-24] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:08:38,977 INFO o.e.r.u.UserRepository [http-nio-8081-exec-25] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:08:39,131 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-26] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:08:42,807 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-27] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.id = ? 
+order by r.id desc 
+
+2021-10-09 19:08:42,832 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-27] update reimbursement.tb_reimbursement set amount = ?, status = ?, employee_id = ?, manager_id = ? where id = ? 
+
+2021-10-09 19:08:42,861 INFO o.e.r.u.UserRepository [http-nio-8081-exec-27] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:08:42,888 INFO o.e.r.u.UserRepository [http-nio-8081-exec-27] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:08:43,898 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-27] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:08:54,948 INFO o.e.r.u.UserRepository [http-nio-8081-exec-21] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:09:05,898 INFO o.e.r.u.UserRepository [http-nio-8081-exec-29] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:09:06,063 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-25] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:09:09,725 INFO o.e.r.u.UserRepository [http-nio-8081-exec-30] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:09:23,412 INFO o.e.r.u.UserRepository [http-nio-8081-exec-26] update reimbursement.tb_user set password = ?, name = ?, email = ?, job_title = ? where id = ? 
+
+2021-10-09 19:09:23,553 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-22] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:09:44,912 INFO o.e.r.u.UserRepository [http-nio-8081-exec-28] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:09:45,058 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-21] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+and r.employee_id = ? 
+order by r.id desc 
+
+2021-10-09 19:09:48,978 INFO o.e.r.u.UserRepository [http-nio-8081-exec-24] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:10:10,835 INFO o.e.r.u.UserRepository [http-nio-8081-exec-30] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.username = ? 
+order by u.name 
+
+2021-10-09 19:10:10,984 INFO o.e.r.r.ReimbursementRepository [http-nio-8081-exec-26] select 
+  r.id, 
+  r.amount, 
+  r.status, 
+  r.employee_id, 
+  e.username as employee_username, 
+  m.username as manager_username, 
+  r.manager_id 
+from reimbursement.tb_reimbursement r 
+left join reimbursement.tb_user e on e.id = r.employee_id 
+left join reimbursement.tb_user m on m.id = r.manager_id 
+where 1 = 1 
+order by r.id desc 
+
+2021-10-09 19:10:14,942 INFO o.e.r.u.UserRepository [http-nio-8081-exec-27] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+order by u.name 
+
+2021-10-09 19:10:21,486 INFO o.e.r.u.UserRepository [http-nio-8081-exec-24] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+and u.id = ? 
+order by u.name 
+
+2021-10-09 19:10:21,513 INFO o.e.r.u.UserRepository [http-nio-8081-exec-24] update reimbursement.tb_user set password = ?, name = ?, email = ?, job_title = ? where id = ? 
+
+2021-10-09 19:10:22,626 INFO o.e.r.u.UserRepository [http-nio-8081-exec-29] select 
+  id, 
+  username, 
+  password, 
+  name, 
+  email, 
+  job_title 
+from reimbursement.tb_user u 
+where 1 = 1 
+order by u.name 
+

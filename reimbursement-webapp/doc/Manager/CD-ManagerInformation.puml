@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ManagerInformationForm {
+    - username: String
+    - password: String
+    - name: String
+    - department: String
+}
+
+class ManagerInformationController {
+    + doGet(request: HttpServletRequest, response: HttpServletResponse): void
+    + doPost(request: HttpServletRequest, response: HttpServletResponse): void
+    - fillForm(form, Manager): void
+    - fillManager(form, Manager): void
+}
+
+class ManagerService {
+    + findById(id: Integer): Manager
+    + save(Manager: Manager): void
+}
+
+class ManagerRepository {
+    + findById(id: Integer): Manager
+    + save(Manager: Manager): void
+}
+
+ManagerInformationController ..> ManagerInformationForm
+ManagerInformationController *--> ManagerService
+ManagerService *--> ManagerRepository
+
+@enduml

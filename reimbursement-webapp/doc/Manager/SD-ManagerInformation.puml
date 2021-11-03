@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Manager
+boundary ManagerInformationController
+control ManagerService
+boundary ManagerRepository
+
+Manager -> ManagerInformationController: doGet(request, response)
+ManagerInformationController -> ManagerService: findById(id)
+ManagerService -> ManagerRepository: findById(id)
+ManagerService <-- ManagerRepository
+ManagerInformationController <-- ManagerService
+ManagerInformationController -> ManagerInformationController: fillForm(form, manager)
+Manager <-- ManagerInformationController
+
+Manager -> ManagerInformationController: doPost(request, response)
+ManagerInformationController -> ManagerService: findById(id)
+ManagerService -> ManagerRepository: findById(id)
+ManagerService <-- ManagerRepository
+ManagerInformationController <-- ManagerService
+ManagerInformationController -> ManagerInformationController: fillManager(form, manager)
+Manager <-- ManagerInformationController
+
+@enduml

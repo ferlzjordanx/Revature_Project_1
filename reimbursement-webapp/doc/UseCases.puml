@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+left to right direction
+
+actor User
+actor Employee
+actor Manager
+
+Employee --|> User
+Manager --|> User
+
+User --> (Login)
+User --> (Logout)
+Employee --> (View Employee Homepage)
+Employee --> (View Employee Information)
+
+(View Employee Homepage) <.. (View Pending Reimbursement): <<extends>>
+(View Employee Homepage) <.. (View Resolved Reimbursement): <<extends>>
+(View Employee Information) <.. (Update Employee Information): <<extends>>
+
+Manager --> (View Manager Homepage)
+Manager --> (View Manager Information)
+Manager --> (View Employees)
+
+(View Manager Information) <.. (Update Manager Information): <<extends>>
+(View Manager Homepage) <.. (Approve or Deny Pending Reimbursement): <<extends>>
+(View Manager Homepage) <.. (view Pending Reimbursements): <<extends>>
+(View Manager Homepage) <.. (View Resolved Reimbursements and Managers): <<extends>>
+(View Employees) <.. (Register Employee): <<extends>>
+(View Employees) <.. (Reset Employee Password): <<extends>>
+
+(Register Employee) ..> (Reset Employee Password): <<includes>>
+
+@enduml

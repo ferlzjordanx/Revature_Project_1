@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor User
+boundary LoginController
+control UserService
+boundary UserRepository
+
+User -> LoginController: doPost(request, response)
+LoginController -> UserService: findByUsername(username)
+UserService -> UserRepository: findByUsername(username)
+UserService <-- UserRepository
+LoginController <-- UserService
+LoginController -> UserService: checkPassword(user, password)
+LoginController <-- UserService
+User <-- LoginController
+
+@enduml

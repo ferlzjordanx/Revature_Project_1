@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Resource name="jdbc/reimbursement-ds" auth="Container" type="javax.sql.DataSource"
+          username="postgres"
+          password="Paco1357"
+          driverClassName="org.postgresql.Driver"
+          url="jdbc:postgresql://db-training-09-2021-rds.cai3pifd23gu.us-east-2.rds.amazonaws.com:5432/postgres"
+          maxTotal="25"
+          maxIdle="10"
+          maxWaitMillis="-1"
+          validationQuery="select 1" />
+</Context>

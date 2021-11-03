@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+actor Manager
+boundary ReimbursementController
+control ReimbursementService
+boundary ReimbursementRepository
+
+Manager -> ReimbursementController: doGet(request, response)
+ReimbursementController -> ReimbursementService: findAll()
+ReimbursementService -> ReimbursementRepository: findAll()
+ReimbursementService <-- ReimbursementRepository
+ReimbursementController <-- ReimbursementService
+ReimbursementController -> ReimbursementController: fillForm(form)
+Manager <-- ReimbursementController
+
+Manager -> ReimbursementController: doPost(request, response)
+ReimbursementController -> ReimbursementService: findById(id)
+ReimbursementService -> ReimbursementRepository: findById(id)
+ReimbursementService <-- ReimbursementRepository
+ReimbursementController <-- ReimbursementService
+
+ReimbursementController -> ReimbursementService: save(reimbursement)
+ReimbursementService -> ReimbursementRepository: save(reimbursement)
+ReimbursementService <-- ReimbursementRepository
+ReimbursementController <-- ReimbursementService
+
+ReimbursementController -> ReimbursementController: fillForm(form)
+Manager <-- ReimbursementController
+
+@enduml

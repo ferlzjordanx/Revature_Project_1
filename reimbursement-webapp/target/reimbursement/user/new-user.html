@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<title>Reimburserment Application</title>
+</head>
+
+<body>
+	<form name="form" action="">
+		<h2>New User</h2>
+		<p class="alert alert-warning" id="messageParagraph"></p>
+
+		<label for="usernameInput">Username:</label>
+		<input id="usernameInput" type="text" name="username" />
+		<br />
+
+		<label for="passwordInput">Password:</label>
+		<input id="passwordInput" type="password" name="password" />
+		<br />
+
+        <label for="nameInput">Name:</label>
+		<input id="nameInput" type="text" name="name" />
+		<br />
+
+        <label for="emailInput">E-mail:</label>
+		<input id="emailInput" type="text" name="email" />
+		<br />
+
+        <label for="jobTitleInput">Job Title:</label>
+		<select id="jobTitleInput" name="jobTitle">
+            <option value="EMPLOYEE">Employee</option>
+            <option value="MANAGER">Manager</option>
+        </select>
+		<br />
+
+		<button id="sendButton" class="btn btn-primary" type="button">Send</button>
+        <button id="backButton" class="btn btn-light" type="button" onclick="history.back()">Cancel</button>
+	</form>
+
+	<script type="module" type="text/javascript" src="new-user.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

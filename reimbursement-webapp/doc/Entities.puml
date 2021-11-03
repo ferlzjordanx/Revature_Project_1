@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam linetype ortho
+
+class User {
+    - id: Integer
+    - username: String
+    - password: String
+    - name: String
+    - email: String
+}
+
+class Employee {
+    - jobTitle: String
+    - managerId: Integer
+}
+
+class Manager {
+    - department: String
+}
+
+class Reimbursement {
+    - id: Integer
+    - amount: Double
+    - status: ReimbursementStatus
+    - employeeId: Integer
+    - managerId: Integer
+}
+
+enum ReimbursementStatus {
+    PENDING,
+    RESOLVED
+}
+
+Employee --|> User
+Manager --|> User
+
+Employee *--> Manager
+
+Reimbursement *--> Employee
+Reimbursement o--> Manager
+Reimbursement *--> ReimbursementStatus
+
+@enduml
